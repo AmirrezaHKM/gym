@@ -183,14 +183,32 @@ td:nth-child(3) {
 
 /* فوتر */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #0d0d0d;
+    color: #aaaaaa;
     text-align: center;
-    padding: 20px 0;
+    padding: 25px 0;
     font-size: 0.9em;
     margin-top: 30px;
 }
-
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+footer a {
+    /* گرادیانت نئون قرمز به آبی برای لینک تلگرام */
+    background: linear-gradient(to right, #FF0077, #00C9FF); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    
+    font-weight: bold;
+    text-decoration: none; /* خط زیر لینک حذف شود */
+}
+.club-copy {
+    font-weight: bold;
+    color: white; 
+}
 /* Media Query برای موبایل‌های کوچک‌تر (ریسپانسیو بیشتر) */
 @media (max-width: 600px) {
     header h1 {
