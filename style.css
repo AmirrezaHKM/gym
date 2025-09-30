@@ -140,7 +140,10 @@ td:nth-child(3) {
     color: white;
     transition: transform 0.3s ease;
 }
-
+.social-item .icon i {
+    font-size: 1.0em; /* اندازه آیکون را کمی بزرگ‌تر می‌کند */
+   /* color: white; /* رنگ آیکون‌ها را سفید می‌کند تا روی پس‌زمینه رنگی دکمه‌ها برجسته شوند */
+}
 .social-item:hover {
     transform: translateY(-5px); /* افکت جابجایی هنگام نگه داشتن موس */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
