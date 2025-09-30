@@ -69,10 +69,23 @@ header .container {
     z-index: 2; /* متن بالاتر از لایه تیره قرار می‌گیرد */
 }
 header h1 {
+    font-family: 'Cairo Play', sans-serif;
     /* سایه متن برای وضوح بیشتر روی گرادیانت */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     margin-bottom: 5px;
     font-size: 2.5em; 
+}
+.slogan-text {
+    font-family: 'Vazirmatn', sans-serif; 
+    
+    font-size: 1.3em; 
+    font-weight: 700; 
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: white; 
+    text-shadow: 
+        0 0 5px #ff5900, 
+        0 0 5px rgba(255, 255, 255, 0.2); 
 }
 header p {
     font-size: 1.2em;
@@ -178,7 +191,7 @@ td:nth-child(3) {
 }
 
 .phone {
-    background-color: #28a745;
+    background-color: #0088cc;
 }
 .location {
     background-color: #111111; /* همان رنگ تیره */
