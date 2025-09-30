@@ -156,6 +156,7 @@ td:nth-child(3) {
 
 .social-item .text {
     font-weight: bold;
+    color: white;
     font-size: 1.1em;
     flex-grow: 1;
 }
