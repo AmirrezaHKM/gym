@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth; /* اسکرول نرم بین بخش‌ها */
+}
 /* تنظیمات عمومی و فونت */
 body {
     font-family: 'Vazirmatn', Tahoma, sans-serif; /* استفاده از فونت فارسی */
@@ -27,28 +30,60 @@ body {
 
 /* هدر */
 header {
-    background-color: #007bff; /* رنگ اصلی باشگاه */
-    color: white;
+    /* ۱. قرار دادن عکس بهینه‌شده */
+    background-image: url('header-pic.webp'); /* !!! نام فایل عکس بهینه‌شده خود را اینجا قرار دهید !!! */
+    
+    /* ۲. تنظیمات ریسپانسیو کلیدی */
+    background-size: cover; /* عکس تمام فضای هدر را پوشش دهد (بدون کشیده شدن) */
+    background-position: center; /* تمرکز عکس روی مرکز باشد */
+    background-repeat: no-repeat; /* عکس تکرار نشود */
+    
+    /* ۳. ارتفاع و پوشش تیره برای خوانایی متن */
+    min-height: 250px; /* حداقل ارتفاع هدر (برای موبایل) */
+    background-color: #000; /* رنگ پس‌زمینه اضطراری اگر عکس لود نشد */
+    
+    /* ۴. گرادیانت تیره نیمه‌شفاف برای بهبود خوانایی متن روی عکس */
+    position: relative; 
+    overflow: hidden;
+    
+    /* استایل‌های متن و Padding اصلی */
+    color: white; 
     padding: 60px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); 
 }
-
+/* افزودن لایه تیره برای بهتر دیده شدن متن */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* این لایه یک پوشش سیاه نیمه‌شفاف روی عکس ایجاد می‌کند */
+    background: rgba(0, 0, 0, 0.4); /* میزان تیرگی ۴۰٪ */
+    z-index: 1; 
+}/* مطمئن شدن از اینکه متن بالای لایه تیره قرار گیرد */
+header .container {
+    position: relative;
+    z-index: 2; /* متن بالاتر از لایه تیره قرار می‌گیرد */
+}
 header h1 {
+    /* سایه متن برای وضوح بیشتر روی گرادیانت */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     margin-bottom: 5px;
-    font-size: 2.5em; /* اندازه بزرگتر برای عنوان اصلی */
+    font-size: 2.5em; 
 }
-
 header p {
     font-size: 1.2em;
 }
 
 /* عنوان‌های بخش‌ها */
 h2 {
-    color: #007bff;
+    color: #cf2f2f;
     text-align: center;
     margin-bottom: 30px;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #cf2f2f;
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -64,11 +99,11 @@ table {
 th, td {
     border: 1px solid #ddd;
     padding: 12px 15px;
-    text-align: right;
+    text-align: center;
 }
 
 th {
-    background-color: #007bff;
+    background: linear-gradient(to bottom, #111111 0%, #333333 100%); 
     color: white;
     font-weight: bold;
 }
@@ -76,7 +111,11 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
-
+td:nth-child(3) {
+    color: #dc3545; /* تغییر کلیدی: آبی کردن نوشته‌ها در ستون قیمت */
+    font-weight: bold; /* اختیاری: پررنگ‌تر کردن قیمت‌ها */
+    font-size: 1.1em;
+}
 .note {
     text-align: center;
     margin-top: 20px;
@@ -127,7 +166,9 @@ tr:nth-child(even) {
 .instagram {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc236a, #bc1888);
 }
-
+.whatsapp {
+    background-color: #25D366; /* رنگ سبز واتساپ */
+}
 .telegram {
     background-color: #0088cc;
 }
@@ -150,6 +191,10 @@ footer {
 @media (max-width: 600px) {
     header h1 {
         font-size: 2em;
+    }
+    header {
+        min-height: 180px; /* ارتفاع را کمتر می‌کنیم */
+        padding: 40px 0; /* فاصله داخلی (Padding) را نیز کم می‌کنیم */
     }
     th, td {
         padding: 10px 8px;
