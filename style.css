@@ -78,7 +78,7 @@ header h1 {
 .slogan-text {
     font-family: 'Vazirmatn', sans-serif; 
     
-    font-size: 1.3em; 
+    font-size: 1.0em; 
     font-weight: 700; 
     margin-top: 15px;
     margin-bottom: 25px;
@@ -248,3 +248,4 @@ footer a {
         margin-bottom: 5px;
     }
 }
+
