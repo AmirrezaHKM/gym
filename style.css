@@ -180,7 +180,9 @@ td:nth-child(3) {
 .phone {
     background-color: #28a745;
 }
-
+.location {
+    background-color: #111111; /* همان رنگ تیره */
+}
 /* فوتر */
 footer {
     background-color: #0d0d0d;
@@ -200,7 +202,7 @@ footer a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    
     
     font-weight: bold;
     text-decoration: none; /* خط زیر لینک حذف شود */
